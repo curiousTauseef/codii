@@ -10,6 +10,7 @@
     "hjs": "*",
     "less-middleware": "*",
     "orm": "2",
-    "sqlite3": "*"
+    "sqlite3": "*",
+    "hashids": "0.3"
   }
 }

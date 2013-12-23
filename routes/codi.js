@@ -1,9 +1,12 @@
+var Hashids = require("hashids"),
+    hashids = new Hashids("this is my erdbeere", 3);
+
 exports.new = function(req, res) {
 	res.render('index', { content: '', id: ""});
 };
 
 exports.get = function(req, res) {
-	var id = req.params.id;
+	var id = hashids.decrypt(req.params.id);
 	
 	if(id == "") {
 		res.render('index', { content: '', id: "" });
@@ -30,13 +33,13 @@ exports.create = function(req, res) {
 		if(err) {
 			res.end("error");
 		} else {
-			res.end(codi.id+"");
+			res.end(hashids.encrypt(codi.id));
 		}
 	});
 }
 
 exports.update = function(req, res) {
-	var id = req.params.id;
+	var id = hashids.decrypt(req.params.id);
 	var content = req.body.content;
 
 	req.models.codi.find({id: id}, function(err, codii) {
