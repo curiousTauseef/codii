@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Codii</title>
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/jquery.history.js"></script>
+    <link rel='stylesheet' href='/stylesheets/reset.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/codemirror.css' />
+    <link rel='stylesheet' href='/stylesheets/monokai.css' />
+  </head>
+  <body>
+    <textarea id="userdefined-awesomeness">{{content}}</textarea>
+    <script>
+      window.currentCodiId = "{{id}}";
+    </script>
+    <script src="/javascripts/codemirror.js"></script>
+    <script src="/javascripts/awesome-magic-unicorn-awesomeness.js"></script>
+  </body>
+</html>
